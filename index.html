@@ -1,79 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Custom Buttons</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      background: transparent;
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
+<button>
+  <div class="svg-wrapper-1">
+    <div class="svg-wrapper">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z"></path>
+        <path
+          fill="currentColor"
+          d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+        ></path>
+      </svg>
+      <style>
+        button {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
 
-    button {
-      font-family: 'Inter', sans-serif;
-      font-size: 18px;
-      padding: 0.7em 1em;
-      padding-left: 0.9em;
-      display: flex;
-      align-items: center;
-      border-radius: 16px;
-      overflow: hidden;
-      cursor: pointer;
-      border: none;
-      transition: all 0.2s;
-      color: white;
-    }
+button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
 
-    /* Email Button */
-    .email-button {
-      width: 104px;
-      height: 32px;
-      background-color: #131313;
-      border: 1px solid #444444;
-    }
-    .email-button:hover {
-      background-color: #313131;
-    }
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
 
-    /* Telegram Button */
-    .telegram-button {
-      width: 104px;
-      height: 32px;
-      background-color: #3182ED;
-    }
-    .telegram-button:hover {
-      background-color: #529BFB;
-    }
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
 
-    /* Common svg styles */
-    button svg {
-      display: block;
-      transform-origin: center center;
-      transition: transform 0.3s ease-in-out;
-      margin-left: 6px;
-    }
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
 
-    /* Hover animations for example */
-    .email-button:hover svg,
-    .telegram-button:hover svg {
-      transform: translateX(5px) scale(1.1);
-    }
-  </style>
-</head>
-<body>
-  <button class="email-button" onclick="window.open('mailto:you@example.com')">
-    E-mail
-  </button>
+button:hover span {
+  transform: translateX(5em);
+}
 
-  <button class="telegram-button" onclick="window.open('https://t.me/jity_digital')">
-    Telegram
-  </button>
-</body>
-</html>
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+</style>
+    </div>
+  </div>
+  <span>Send</span>
+</button>
+
+
