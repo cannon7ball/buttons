@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Custom Buttons</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: transparent;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    button {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      padding: 0.7em 1em;
+      padding-left: 0.9em;
+      display: flex;
+      align-items: center;
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+      color: white;
+    }
+
+    /* Email Button */
+    .email-button {
+      width: 104px;
+      height: 32px;
+      background-color: #131313;
+      border: 1px solid #444444;
+    }
+    .email-button:hover {
+      background-color: #313131;
+    }
+
+    /* Telegram Button */
+    .telegram-button {
+      width: 104px;
+      height: 32px;
+      background-color: #3182ED;
+    }
+    .telegram-button:hover {
+      background-color: #529BFB;
+    }
+
+    /* Common svg styles */
+    button svg {
+      display: block;
+      transform-origin: center center;
+      transition: transform 0.3s ease-in-out;
+      margin-left: 6px;
+    }
+
+    /* Hover animations for example */
+    .email-button:hover svg,
+    .telegram-button:hover svg {
+      transform: translateX(5px) scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <button class="email-button" onclick="window.open('mailto:you@example.com')">
+    E-mail
+  </button>
+
+  <button class="telegram-button" onclick="window.open('https://t.me/jity_digital')">
+    Telegram
+  </button>
+</body>
+</html>
