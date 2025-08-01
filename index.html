@@ -1,119 +1,46 @@
-<div style="display: flex; gap: 12px;">
-  <!-- Email Button -->
-  <a href="mailto:your@email.com" target="_blank" style="text-decoration: none;">
-    <button class="email">
-      <div class="svg-wrapper-1">
-        <div class="svg-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-            <path fill="none" d="M0 0h24v24H0z" />
-            <path
-              class="icon-path"
-              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16
-              c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-            />
-          </svg>
-        </div>
-      </div>
-      <span>E-mail</span>
-    </button>
-  </a>
-
-  <!-- Telegram Button -->
-  <a href="https://t.me/yourusername" target="_blank" style="text-decoration: none;">
-    <button class="telegram">
-      <div class="svg-wrapper-1">
-        <div class="svg-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-            <path fill="none" d="M0 0h24v24H0z"></path>
-            <path
-              class="icon-path"
-              d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
-            ></path>
-          </svg>
-        </div>
-      </div>
-      <span>Telegram</span>
-    </button>
-  </a>
+<!-- Email & Telegram Buttons -->
+<div class="button-group">
+  <a href="mailto:your.email@example.com" class="email-button">Email</a>
+  <a href="https://t.me/your_username" class="telegram-button" target="_blank">Telegram</a>
 </div>
 
+<!-- Styles -->
 <style>
-  button {
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    padding: 0.7em 1em;
-    padding-left: 0.9em;
-    width: 140px;
-    display: flex;
-    align-items: center;
-    border: none;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: all 0.2s;
-    cursor: pointer;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
 
-  button span {
-    display: block;
-    margin-left: 0.3em;
-    transition: all 0.3s ease-in-out;
-    color: #E1E1E1BE;
-  }
+.button-group {
+  display: flex;
+  gap: 12px;
+}
 
-  .telegram span {
-    color: white;
-  }
+.email-button,
+.telegram-button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  border-radius: 50px;
+  padding: 8px 16px;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  color: #ffffff;
+  display: inline-block;
+}
 
-  button svg .icon-path {
-    fill: white;
-  }
+.email-button {
+  background: #242220;
+}
 
-  button svg {
-    display: block;
-    transform-origin: center center;
-    transition: transform 0.3s ease-in-out;
-  }
+.email-button:hover {
+  opacity: 0.8;
+}
 
-  button:hover .svg-wrapper {
-    animation: fly-1 0.6s ease-in-out infinite alternate;
-  }
+.telegram-button {
+  background: #4091F5;
+}
 
-  button:hover svg {
-    transform: translateX(2.3em) scale(1.1);
-  }
-
-  button:hover span {
-    transform: translateX(6em);
-  }
-
-  button:active {
-    transform: scale(0.95);
-  }
-
-  .telegram {
-    background: #3182ED;
-  }
-
-  .telegram:hover {
-    background: #529BFB;
-  }
-
-  .email {
-    background: #272727;
-    border: 1px solid #444444;
-  }
-
-  .email:hover {
-    background: #1D1D1D;
-  }
-
-  @keyframes fly-1 {
-    from {
-      transform: translateY(0.1em);
-    }
-    to {
-      transform: translateY(-0.1em);
-    }
-  }
+.telegram-button:hover {
+  background: #68A8F7;
+}
 </style>
-
