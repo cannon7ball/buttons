@@ -72,7 +72,7 @@
     E-mail
   </button>
 
-  <button class="telegram-button" onclick="window.open('https://t.me/yourusername')">
+  <button class="telegram-button" onclick="window.open('https://t.me/jity_digital')">
     Telegram
   </button>
 </body>
