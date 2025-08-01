@@ -1,33 +1,62 @@
-<a href="https://t.me/yourusername" target="_blank" style="text-decoration: none;">
-  <button>
-    <div class="svg-wrapper-1">
-      <div class="svg-wrapper">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="24"
-          height="24"
-        >
-          <path fill="none" d="M0 0h24v24H0z"></path>
-          <path
-            fill="currentColor"
-            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
-          ></path>
-        </svg>
-      </div>
-    </div>
-    <span>Telegram</span>
-  </button>
-</a>
+<div style="display: flex; gap: 12px;">
 
+  <!-- Email Button (Left) -->
+  <a href="mailto:your@email.com" target="_blank" style="text-decoration: none;">
+    <button class="email">
+      <div class="svg-wrapper-1">
+        <div class="svg-wrapper">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path fill="none" d="M0 0h24v24H0z" />
+            <path
+              fill="currentColor"
+              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16
+              c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+            />
+          </svg>
+        </div>
+      </div>
+      <span>E-mail</span>
+    </button>
+  </a>
+
+  <!-- Telegram Button (Right) -->
+  <a href="https://t.me/yourusername" target="_blank" style="text-decoration: none;">
+    <button class="telegram">
+      <div class="svg-wrapper-1">
+        <div class="svg-wrapper">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path fill="none" d="M0 0h24v24H0z"></path>
+            <path
+              fill="currentColor"
+              d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <span>Telegram</span>
+    </button>
+  </a>
+
+</div>
+
+<!-- Shared Styles -->
 <style>
   button {
     font-family: 'Inter', sans-serif;
     font-size: 18px;
-    background: #3182ED;
-    color: white;
     padding: 0.7em 1em;
     padding-left: 0.9em;
+    width: 140px;
     display: flex;
     align-items: center;
     border: none;
@@ -54,7 +83,7 @@
   }
 
   button:hover svg {
-    transform: translateX(2em) rotate(45deg) scale(1.1);
+    transform: translateX(2.2em) scale(1.1);
   }
 
   button:hover span {
@@ -63,6 +92,25 @@
 
   button:active {
     transform: scale(0.95);
+  }
+
+  .telegram {
+    background: #3182ED;
+    color: white;
+  }
+
+  .telegram:hover {
+    background: #529BFB;
+  }
+
+  .email {
+    background: #131313;
+    color: white;
+    border: 1px solid #444444;
+  }
+
+  .email:hover {
+    background: #313131;
   }
 
   @keyframes fly-1 {
